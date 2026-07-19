@@ -98,7 +98,7 @@ function Products({cart, addToCart}: ProductsProps) {
             <div className="w-auto flex flex-row items-center justify-center flex-wrap gap-3">
                 {products.map((shirt, index) => (
                     <div key={index}>
-                        <ProductCard cart={cart} addToCart={addToCart}
+                        <ProductCard cart={cart} addToCart={addToCart} selectedColors={selectedColors[index]}
                         img={
                             selectedColors[index] === "white"
                                 ? shirt.white

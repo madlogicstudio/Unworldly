@@ -54,7 +54,7 @@ export const Cart = ({setIsCart, cart, addToCart}: HeaderProps) => {
                                 <div className="flex flex-row items-center gap-3">
                                     <span className="text-black sm:text-md text-sm">Color: </span>
                                     <div className="w-full flex flex-row items-center border px-2 py-1 rounded">
-                                        <span className="text-black sm:text-md text-sm cursor-pointer">Black</span>
+                                        <span className="text-black sm:text-md text-sm cursor-pointer capitalize">{item.Color}</span>
                                         <i className="bx bx-chevron-down cursor-pointer text-black text-xl ml-1 hovered" />
                                     </div>
                                 </div>

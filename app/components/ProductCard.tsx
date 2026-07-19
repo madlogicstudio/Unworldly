@@ -10,9 +10,10 @@ type ProductCardProps = {
     price: String;
     cart: any[];
     addToCart: React.Dispatch<React.SetStateAction<any[]>>;
+    selectedColors: "white" | "black";
 }
 
-export const ProductCard = ({onSelect, img, title, price, cart, addToCart}: ProductCardProps) => {
+export const ProductCard = ({onSelect, img, title, price, cart, addToCart, selectedColors}: ProductCardProps) => {
 
     const [selected, setSelected] = useState(true);
 
@@ -22,7 +23,8 @@ export const ProductCard = ({onSelect, img, title, price, cart, addToCart}: Prod
             {
                 Image: img,
                 Title: title,
-                Price: price
+                Price: price,
+                Color: selectedColors
             }
         ]);
     }   
