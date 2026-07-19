@@ -25,9 +25,10 @@ body {
 }
 
 .hovered:hover{
-  color: red;
+  color: #D25353;
   transition: 0.3s ease-in-out;
 }
+
 
 @keyframes marquee {
   from {

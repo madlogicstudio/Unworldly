@@ -21,8 +21,12 @@ import DefyBlack from "../../public/Tshirts/Defy_black.png"
 import CosmicBlack from "../../public/Tshirts/Cosmic_black.png"
 import BeastBlack from "../../public/Tshirts/Beast_black.png"
 
+type ProductsProps = {
+    cart: any[];
+    addToCart: React.Dispatch<React.SetStateAction<any[]>>;
+}
 
-function Products() {
+function Products({cart, addToCart}: ProductsProps) {
 
     const products = [
         {
@@ -94,13 +98,13 @@ function Products() {
             <div className="w-auto flex flex-row items-center justify-center flex-wrap gap-3">
                 {products.map((shirt, index) => (
                     <div key={index}>
-                        <ProductCard 
+                        <ProductCard cart={cart} addToCart={addToCart}
                         img={
                             selectedColors[index] === "white"
                                 ? shirt.white
                                 : shirt.black
                         }
-                        title={shirt.title} price={shirt.price} onSelect={(color) => handleColorChange(index, color)}/>
+                        title={shirt.title} price={shirt.price} onSelect={(color) => handleColorChange(index, color)} />
                     </div>
                 ))}
             </div>

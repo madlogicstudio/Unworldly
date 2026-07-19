@@ -8,11 +8,24 @@ type ProductCardProps = {
     img: any;
     title: string;
     price: String;
+    cart: any[];
+    addToCart: React.Dispatch<React.SetStateAction<any[]>>;
 }
 
-export const ProductCard = ({onSelect, img, title, price}: ProductCardProps) => {
+export const ProductCard = ({onSelect, img, title, price, cart, addToCart}: ProductCardProps) => {
 
     const [selected, setSelected] = useState(true);
+
+    const handleAddToCart = () => {
+        addToCart([
+            ...cart,
+            {
+                Image: img,
+                Title: title,
+                Price: price
+            }
+        ]);
+    }   
 
     return (
         <div className="h-auto w-[160px] sm:w-[240px] flex flex-col items-start justify-center gap- shadow-lg cursor-pointer overflow-hidden">
@@ -43,7 +56,8 @@ export const ProductCard = ({onSelect, img, title, price}: ProductCardProps) => 
 
             <div className="w-full flex flex-row items-center justify-between px-3 pb-3 z-10 bg-white">
                 <i className="bx bx-heart cursor-pointer text-black text-xl" />
-                <i className="bx bx-cart cursor-pointer text-black text-xl" />
+                <i className="bx bx-cart cursor-pointer text-black text-xl hovered" 
+                    onClick={handleAddToCart}/>
             </div>
             
         </div>

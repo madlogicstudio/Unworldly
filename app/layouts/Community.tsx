@@ -9,7 +9,7 @@ function Community() {
                 Stay up to date with Unworldly's new arrivals, promotions and events.</span>
             
             <div className="w-full flex flex-row items-center relative sm:w-full md:w-[300px]">
-                <input type="email" placeholder="Email" className="w-full placeholder:text-red-500 outline-none bg-white p-3 sm:text-sm text-xs text-black"
+                <input type="email" placeholder="Email" className="w-full placeholder:text-[#EA7B7B] outline-none bg-white p-3 sm:text-sm text-xs text-black"
                     maxLength={60} required/>
                 <i className="bx bx-chevron-right cursor-pointer text-black text-2xl absolute bg-white right-0 px-3 hovered" />
             </div>

@@ -12,10 +12,10 @@ export const TextCarousell = () => {
     ];
 
     return (
-        <div className="max-w-[1080px] w-full overflow-hidden bg-black py-4">
+        <div className="max-w-[1080px] w-full overflow-hidden bg-black sm:py-4 py-3">
             <div className="flex whitespace-nowrap animate-marquee">
                 {[...items, ...items].map((item, index) => (
-                <span key={index} className="mx-8 text-white font-mono text-sm cursor-pointer hovered">
+                <span key={index} className="mx-8 text-white font-mono sm:text-sm text-xs cursor-pointer hovered">
                     {item}
                 </span>
                 ))}
