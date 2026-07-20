@@ -16,8 +16,12 @@ type ProductCardProps = {
 export const ProductCard = ({onSelect, img, title, price, cart, addToCart, selectedColors}: ProductCardProps) => {
 
     const [selected, setSelected] = useState(true);
+    const [isAdded, setIsAdded] = useState(false);
 
     const handleAddToCart = () => {
+
+        setIsAdded(true);
+
         addToCart([
             ...cart,
             {
@@ -27,7 +31,11 @@ export const ProductCard = ({onSelect, img, title, price, cart, addToCart, selec
                 Color: selectedColors
             }
         ]);
-    }   
+
+        setInterval(() => {
+            setIsAdded(false);
+        }, 3000);
+    } 
 
     return (
         <div className="h-auto w-[160px] sm:w-[240px] flex flex-col items-start justify-center gap- shadow-lg cursor-pointer overflow-hidden">
@@ -58,8 +66,13 @@ export const ProductCard = ({onSelect, img, title, price, cart, addToCart, selec
 
             <div className="w-full flex flex-row items-center justify-between px-3 pb-3 z-10 bg-white">
                 <i className="bx bx-heart cursor-pointer text-black text-xl" />
-                <i className="bx bx-cart cursor-pointer text-black text-xl hovered" 
-                    onClick={handleAddToCart}/>
+                {isAdded? 
+                    <i className="bx bx-check cursor-pointer text-green-300 text-xl" />
+                    :
+                    <i className="bx bx-cart cursor-pointer text-black text-xl hovered" 
+                        onClick={handleAddToCart}/>
+                }
+                
             </div>
             
         </div>

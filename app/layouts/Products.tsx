@@ -91,6 +91,8 @@ function Products({cart, addToCart}: ProductsProps) {
         });
     };
 
+    
+
     return (
         <div className="max-w-[1080px] w-full flex flex-col items-center justify-start gap-3 p-3">
             <span className="font-mono text-black">Products</span>

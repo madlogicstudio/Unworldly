@@ -2,16 +2,14 @@
 
 import { useEffect, useState } from "react"
 import Image from "next/image"
-import Showcase1 from "../../public/Showcase/1000090355.jpeg"
-import Showcase2 from "../../public/Showcase/1000090358.jpeg"
-import Showcase3 from "../../public/Showcase/1000090356.jpeg"
-import Showcase4 from "../../public/Showcase/1000090357.jpeg"
-import Showcase5 from "../../public/Showcase/1000090509.jpeg"
+import Showcase1 from "../../public/Showcase/1000090509.jpeg"
+import Showcase2 from "../../public/Showcase/1000090663.jpeg"
+
 
 function Showcase() {
 
     const Images = [
-        Showcase5, Showcase1
+        Showcase1, Showcase2
     ]
 
     const [count, setCount] = useState(0);

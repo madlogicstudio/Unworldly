@@ -21,10 +21,10 @@ export const Cart = ({setIsCart, cart, addToCart}: HeaderProps) => {
                 <div className="w-full flex flex-row items-center justify-start gap-3">
                     <i className="bx bx-arrow-left cursor-pointer text-black text-2xl hovered" 
                         onClick={() => setIsCart(false)} />
-                    <span className="font-mono text-black">Back</span>
+                    <span className="font-mono text-black sm:text-md text-sm">Back</span>
                 </div>
                 
-                <span className="font-mono text-black">Products</span>
+                <span className="font-mono text-black sm:text-md text-sm">Cart</span>
             </div>
 
             {cart.length === 0 && <div className="w-full h-screen flex flex-col items-center justify-center p-3 gap-3 text-black">
